@@ -2,9 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pac-Man</title>
-        <link rel="stylesheet" href="css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>pacman</title>
+        <link rel="icon" href="./static/assets/favicon.ico">
+        <link rel="stylesheet" href="static/css/global.css">
+        <link rel="stylesheet" href="static/css/styles.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
 
@@ -12,41 +14,34 @@
         <div class="game-container">
             <div class="subject">
                 <div class="subject-header">
-                    <div class="title-game"><img src="assets/pm-header.png"></div>
-    
-                    <div class="handle-score">
-                        <div class="score">score: <span id="score"></span></div> <!-- score -->
-                        <div class="time">time: <span id="timer"></span></div> <!-- timer -->
-                    </div>
+                    <div class="title-game"><img src="static/assets/pm-header.png" alt="Pacman"></div>
                 </div>
                 
                 <div class="subject-body">
                     <div class="game-board" id="game-board"></div>
+                    
+                    <div class="mobile-controls">
+                        <div class="control-row">
+                            <button class="control-btn" id="btn-up"><i class='bx bxs-up-arrow'></i></button>
+                        </div>
+                        <div class="control-row">
+                            <button class="control-btn" id="btn-left"><i class='bx bxs-left-arrow'></i></button>
+                            <button class="control-btn" id="btn-pause"><i class='bx bx-pause'></i></button>
+                            <button class="control-btn" id="btn-right"><i class='bx bxs-right-arrow'></i></button>
+                        </div>
+                        <div class="control-row">
+                            <button class="control-btn" id="btn-down"><i class='bx bxs-down-arrow'></i></button>
+                        </div>
+                    </div>
                 </div>
     
                 <div class="subject-footer">
-                    <div class="handle-score">
-                        <div class="lives"> <!-- lives -->
-                            <i class='bx bxs-game' ></i>
-                            <i class='bx bxs-game' ></i>
-                            <i class='bx bxs-game' ></i>
-                            <i class='bx bxs-game' ></i>
-                            <i class='bx bxs-game' ></i>
-                        </div>
-                        <!-- <div class="fruit"></div> --><!-- fruit score -->
-                    </div>
+                    <button id="reset" style="display:none;"></button>
+                    <button id="continue" style="display:none;"></button>
                 </div>
-            </div>
-
-            <div id="overLayer"></div>
-            <div id="popUp">
-                <h2 id="menu-title"></h2>
-                <h5 id="sub-title"></h5>
-                <button type="button" class='btn' id="continue"><!--<i class='bx bx-play'></i>-->play</button> <!-- contunie button -->
-                <button type="button" class='btn' id="reset"><!--<i class='bx bx-reset'></i>-->reset</button> <!-- reset button -->
             </div>
         </div>
 
-        <script type="module" src="js/main.js"></script>
+        <script type="module" src="static/js/main.js"></script>
     </body>
 </html>
