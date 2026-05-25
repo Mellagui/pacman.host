@@ -219,4 +219,48 @@ button:hover {
     .handle-score {
         font-size: 0.9rem;
     }
-} 
+}
+.subject-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.game-board {
+    /* Ensure the board has a visible size */
+    margin: 0 auto;
+    border: 2px solid #222; 
+    background: #000;
+}
+
+.mobile-controls {
+    margin-top: 20px;
+    padding-bottom: 20px; /* Space for phone bottom bars */
+}
+
+.control-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.control-btn {
+    width: 55px;
+    height: 55px;
+    background: #111;
+    border: 2px solid #f8ea48;
+    color: #f8ea48;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+}
+
+.control-btn:active {
+    background: #f8ea48;
+    color: #000;
+}
